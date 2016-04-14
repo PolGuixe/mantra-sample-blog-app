@@ -10,7 +10,7 @@ export default function () {
       check(content, String);
 
       // Demo the latency compensations (Delete this in production)
-      Meteor._sleepForMs(500);
+      Meteor._sleepForMs(10000);
 
       // XXX: Do some user authorization
       const createdAt = new Date();

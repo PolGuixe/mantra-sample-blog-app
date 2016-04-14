@@ -6,6 +6,11 @@ export const composer = ({context}, onData) => {
   if (Meteor.subscribe('posts.list').ready()) {
     const posts = Collections.Posts.find().fetch();
     onData(null, {posts});
+  }else{
+    const posts = Collections.Posts.find().fetch();
+    if(posts){
+      onData(null, {posts});
+    }
   }
 };
 
